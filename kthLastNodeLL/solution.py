@@ -11,23 +11,21 @@ class Node:
         return str(result)
 
 def remove_kth_from_linked_list(head, k):
-    if head is None:
-        return head
+    if head is None or head.next is None:
+        return None
+    slow = head
+    fast = head
 
-    prev = None
-    curr = head
+    for i in range(0, k):
+        fast = fast.next
+    while fast.next:
+        slow = slow.next
+        fast = fast.next
 
-    while curr.next:
-        prev = curr
-        curr = curr.next
-        count = 0
-        temp = curr
-        while temp.next:
-            count += 1
-            temp = temp.next
-        if count == k-1:
-            prev.next = curr.next
+    slow.next = slow.next.next
+
     return head
+
 
 head = Node(1, Node(2, Node(3, Node(4, Node(5)))))
 print(head)
