@@ -5,11 +5,14 @@ For example: [0,1,0,2,1,0,1,3,2,1,2,1] should return 6 because 6 units of water 
        X               
    X███XX█X              
  X█XX█XXXXXX                   
-# [0,1,0,2,1,0,1,3,2,1,2,1]
+ [0,1,0,2,1,0,1,3,2,1,2,1]
+ 
 Here's your starting pont:
 
-def capacity(arr):
-  # Fill this in.
-
-print capacity([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])
-# 6
+```python
+>>> def capacity(arr):
+...     # Fill this in.
+>>>
+>>> print(capacity([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
+6
+```
